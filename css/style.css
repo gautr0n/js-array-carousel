@@ -1,16 +1,38 @@
-/*generics*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+#carousel {
+    height: 400px;
+    width: 700px;
+    margin: 30px auto;
+    position: relative;
 }
 
-/*utilities*/
-:root{
-    --gray: #737373;
+#carousel .gallery {
+    height: 100%;
 }
 
-.margin-bt{
-    margin-bottom: 20px;
+#carousel .gallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+#carousel .gallery .active {
+    display: block;
+}
+
+#carousel .bi {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#prev {
+    right: 105%;
+}
+
+#next {
+    left: 105%;
 }
