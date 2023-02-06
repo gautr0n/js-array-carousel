@@ -19,4 +19,41 @@ carouselBody.innerHTML +=
 
     <div class="carousel__arrow arrow-right">
         <i class="fa-solid fa-chevron-right"></i>
-    </div>` ;
+    </div>`;
+
+let activeSlide = 0;
+const slideElements = document.querySelectorAll('.slide');
+console.log(slideElements);
+
+const rightBtnElement = document.querySelector('.carousel__arrow.arrow-right');
+const leftBtnElement = document.querySelector('.carousel__arrow.arrow-left');
+
+console.log(rightBtnElement);
+
+rightBtnElement.addEventListener('click', function () {
+	console.log(activeSlide);
+
+    if (activeSlide < 4){
+
+        let actualSlide = slideElements[activeSlide];
+        actualSlide.classList.remove('active');
+
+        activeSlide += 1;
+
+        let nextSlide = slideElements[activeSlide];
+        nextSlide.classList.add('active');
+
+        console.log(activeSlide);
+    } else if (activeSlide = 4){
+
+        let actualSlide = slideElements[activeSlide];
+	    actualSlide.classList.remove('active');
+
+        activeSlide = 0;
+
+	    let nextSlide = slideElements[activeSlide];
+	    nextSlide.classList.add('active');
+
+        console.log(activeSlide);
+    }
+})
