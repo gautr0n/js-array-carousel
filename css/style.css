@@ -14,3 +14,38 @@
 .margin-bt{
     margin-bottom: 20px;
 }
+
+/* Body*/
+.slide img {
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.slide.active {
+	display: block;
+}
+
+.slide {
+	display: none;
+}
+
+.carousel {
+	position: relative;
+}
+
+.carousel .carousel__arrow {
+	position: absolute;
+	font-size: 40px;
+	color: white;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.carousel .carousel__arrow.arrow-left {
+	left: 20px;
+}
+
+.carousel .carousel__arrow.arrow-right {
+	right: 20px;
+}
